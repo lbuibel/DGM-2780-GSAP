@@ -43,11 +43,22 @@ calcNavHeight()
 
 
 //------------------ SCROLL MAGIC -----------------//
-
 const controller = new ScrollMagic.Controller();
 
-var scene1 = new ScrollMagic.Scene({
+var headingFade = TweenMax.from(".fade-in", 1, {y: 25, opacity: 0});
+var cardFade = TweenMax.from(".card-fade-in", 1, {y: 25, opacity: 0});
+
+
+var scene = new ScrollMagic.Scene({
     triggerElement: '.hero-info',  
 })
-.addIndicators({name: "1 (duration: 0)"}) // add indicators (requires plugin)
-.addTo(controller)
+.setTween(headingFade)
+.addIndicators({name: "trigger"}) 
+.addTo(controller);
+
+var scene = new ScrollMagic.Scene({
+    triggerElement: '.trigger2',  
+})
+.setTween(cardFade)
+.addIndicators() 
+.addTo(controller);
