@@ -1,0 +1,80 @@
+// CONTAINS MAMBURGER MENU, COMPANY NAME AND CART LINK
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  h1 {
+    letter-spacing: 3px;
+  }
+  p {
+    margin-bottom: 0;
+    margin-top: -0.75rem;
+    font-size: 1.5rem;
+  }
+  padding: 2rem 0;
+}
+
+// CENTERING SPA NAME
+nav > div {
+  text-align: center;
+}
+
+// OPENED HAMBURGER MENU
+.nav-window {
+  padding: 0;
+  margin: 0;
+  background-color: rgb(193, 190, 190);
+  background-image: url("@{website-url}images/aloe_bw.jpg");
+  background-position: center;
+  color: white;
+  position: absolute;
+  right: 0px;
+  top: 0rem;
+  height: 100vh;
+  width: 100%;
+  transform: translateX(-100%);
+  // CONTROLS SLIDING OUT SPEED
+  transition: 1.5s ease;
+  opacity: 0;
+}
+
+// FADES MENU PAGE IN AND OUT
+.nav-active {
+  transform: translateX(0);
+  opacity: 1;
+  // CONTROLS NAV WINDOW SLIDING IN SPEED
+  transition: 0.75s ease-in;
+}
+
+// DIV CONTAINS MENU CLOSE BUTTON
+// HEIGHT IS SET/CALCULATED BY JAVASCRIPT SO THE HAMBURGER MENU MATCHES LOCATION OF CLOSE BUTTON
+.nav-window > div {
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+
+.nav-links ul {
+  padding: 0;
+  margin: 0;
+}
+
+// SPACING NAVIGATION LINKS
+.nav-links li {
+  list-style-type: none;
+  margin: 0rem 0 5rem 0;
+}
+
+.nav-links li a {
+  color: white;
+  font-family: "Roboto Condensed";
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 3.6rem;
+  text-decoration: none;
+
+  &:hover {
+    color: @main-color;
+  }
+}

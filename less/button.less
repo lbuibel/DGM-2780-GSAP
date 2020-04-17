@@ -1,0 +1,29 @@
+.lg-btn {
+  .btn-color();
+  .btn-size(25rem, 4rem);
+  .border-radius();
+  border: 2px solid @btn-border;
+  text-transform: uppercase;
+  font-size: 1.75rem;
+  margin: 4rem 0;
+  transition: 0.5s;
+  &:hover {
+    .btn-color(@btn-background, @btn-border);
+    cursor: pointer;
+  }
+}
+
+.card-btn {
+  .btn-color();
+  .btn-size(15rem, 3rem);
+  .border-radius();
+  text-align: center;
+  text-transform: uppercase;
+  border: 2px solid @btn-border;
+  font-size: 1.4rem;
+  transition: 0.5s;
+  &:hover {
+    .btn-color(@btn-background, @btn-border);
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,87 @@
+// ADJUSTS CHANGES CONTENT FROM ROWS TO COLUMNS BASED ON PAGE WIDTH
+.flex-container {
+  .container-width();
+  .flex-between();
+  margin: 0 auto;
+  flex-direction: row;
+  margin-bottom: 4rem;
+  img {
+    width: 100%;
+  }
+  div {
+    width: 48%;
+  }
+  @media (max-width: 665px) {
+    flex-direction: column;
+    img,
+    div {
+      width: 100%;
+      margin-bottom: 2.5%;
+    }
+  }
+}
+
+.container {
+  .container-width();
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  margin-right: auto;
+  margin-left: auto;
+  @media (max-width: 665px) {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+    padding: 0;
+  }
+}
+
+.nav-container {
+  .container-width();
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  margin-right: auto;
+  margin-left: auto;
+  @media (max-width: 665px) {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+
+.quote-container {
+  background-color: rgb(193, 190, 190);
+  min-height: 35rem;
+  height: auto;
+  margin: 7rem 0;
+  .flex-between();
+  align-items: center;
+  > div {
+    .container-width();
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+    img {
+      object-fit: cover;
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+    }
+    blockquote {
+      width: 75%;
+      padding: 5%;
+    }
+    @media (max-width: 665px) {
+      flex-direction: column;
+      padding-top: 5%;
+      blockquote {
+        font-size: 2rem;
+        line-height: 2.2rem;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
+}

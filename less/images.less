@@ -1,0 +1,44 @@
+// @base-url: "http://127.0.0.1:5501/website/";
+
+// MIXIN USED ON BACKGROUND IMAGES
+.background-img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero-img > img {
+  object-fit: cover;
+  height: 55vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 6rem;
+}
+
+.large-card > img {
+  object-fit: cover;
+  width: 50%;
+  height: 85%;
+  @media (max-width: 665px) {
+    width: 100%;
+    height: 50%;
+  }
+}
+
+.small-card > img {
+  height: 60%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.hero-text h1 {
+  font-size: 5.2rem;
+}
+
+#about {
+  background-image: url("@{website-url}images/resort.jpeg");
+  .background-img();
+  height: 50rem;
+  margin-bottom: 6rem;
+}
