@@ -45,20 +45,59 @@ calcNavHeight()
 //------------------ SCROLL MAGIC -----------------//
 const controller = new ScrollMagic.Controller();
 
-var headingFade = TweenMax.from(".fade-in", 1, {y: 25, opacity: 0});
-var cardFade = TweenMax.from(".card-fade-in", 1, {y: 25, opacity: 0});
-
-
+var headingFade = TweenMax.from(".fade-in", .75, {y: 25, opacity: 0});
+var cardFade = TweenMax.from(".facial-card", .75, {y: 25, opacity: 0});
+var cardFade2 = TweenMax.from(".skin-care-card", .75, {y: 15, opacity: 0})
+var galleryFade = TweenMax.from("#gallery-fade", 1.75, {y: 15, opacity: 0})
+var smallCardFade = TweenMax.from(".small-card-container", .75, {y:25, opacity: .25})
 var scene = new ScrollMagic.Scene({
     triggerElement: '.hero-info',  
 })
 .setTween(headingFade)
+.setTween(galleryFade)
 .addIndicators({name: "trigger"}) 
 .addTo(controller);
 
-var scene = new ScrollMagic.Scene({
+var scene2 = new ScrollMagic.Scene({
     triggerElement: '.trigger2',  
 })
 .setTween(cardFade)
 .addIndicators() 
 .addTo(controller);
+
+var scen3 = new ScrollMagic.Scene({
+    triggerElement: '#gallery-trigger',  
+})
+.setTween(galleryFade)
+.addIndicators({name: "trigger"}) 
+.addTo(controller);
+
+var scene4 = new ScrollMagic.Scene({
+    triggerElement: "#facial-trigger"
+})
+.setTween(cardFade2)
+.addIndicators({name: "facial trigger"}) 
+.addTo(controller);
+
+var scene5 = new ScrollMagic.Scene({
+    triggerElement: ".skin-care-card"
+})
+.setTween(smallCardFade)
+.addIndicators({name: "small trigger"}) 
+.addTo(controller);
+
+//------------------ GSAP ANIMATIONS -----------------//
+window.addEventListener('load', ()=> {
+    gsap.from('.logo', {duration: 3, opacity: 0})
+})
+
+const burger = document.querySelector('#burger')
+.addEventListener('click', () => {
+    gsap.to('#burger', {duration: 1, rotation: -90, opacity: 0, x: -50})
+    gsap.from('#close', {duration: 1.5, x: -100, rotation: -100})
+})
+
+const close = document.querySelector('#close')
+.addEventListener('click', () => {
+    gsap.to('#burger', {duration: 1, rotation: 0, opacity: 1, x: 0})
+})
