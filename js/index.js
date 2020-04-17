@@ -55,35 +55,35 @@ var scene = new ScrollMagic.Scene({
 })
 .setTween(headingFade)
 .setTween(galleryFade)
-.addIndicators({name: "trigger"}) 
+// .addIndicators({name: "trigger"}) 
 .addTo(controller);
 
 var scene2 = new ScrollMagic.Scene({
     triggerElement: '.trigger2',  
 })
 .setTween(cardFade)
-.addIndicators() 
+// .addIndicators() 
 .addTo(controller);
 
 var scen3 = new ScrollMagic.Scene({
     triggerElement: '#gallery-trigger',  
 })
 .setTween(galleryFade)
-.addIndicators({name: "trigger"}) 
+// .addIndicators({name: "trigger"}) 
 .addTo(controller);
 
 var scene4 = new ScrollMagic.Scene({
     triggerElement: "#facial-trigger"
 })
 .setTween(cardFade2)
-.addIndicators({name: "facial trigger"}) 
+// .addIndicators({name: "facial trigger"}) 
 .addTo(controller);
 
 var scene5 = new ScrollMagic.Scene({
     triggerElement: ".skin-care-card"
 })
 .setTween(smallCardFade)
-.addIndicators({name: "small trigger"}) 
+// .addIndicators({name: "small trigger"}) 
 .addTo(controller);
 
 //------------------ GSAP ANIMATIONS -----------------//
